@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coleção Imagens Históricas - CEMIC Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .image-gallery {
+      padding: 20px 0;
+    }
+    .gallery-item {
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .gallery-caption {
+      text-align: center;
+      padding: 10px 5px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .modal-img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="acervo.html">Visão Geral das Coleções</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-header">Coleções</li>
+              <li><a class="dropdown-item" href="colecao-alida-metcalf.html">Coleção Alida C. Metcalf</a></li>
+              <li><a class="dropdown-item" href="colecao-antonio-branco.html">Coleção Antônio Branco</a></li>
+              <li><a class="dropdown-item" href="colecao-bertha-nerici.html">Coleção Bertha Moraes Nérici</a></li>
+              <li><a class="dropdown-item" href="colecao-camara-municipal.html">Coleção Câmara Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ccam.html">Coleção CCAM</a></li>
+              <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
+              <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
+              <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item active" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
+              <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-anhanguera.html">Coleção Museu Anhanguera</a></li>
+              <li><a class="dropdown-item" href="colecao-secretaria-cultura.html">Coleção Secretaria de Cultura e Turismo</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-musica.html">Coleção Museu da Música</a></li>
+              <li><a class="dropdown-item" href="hemeroteca.html">Hemeroteca</a></li>
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO DA COLEÇÃO -->
+  <main class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+        <li class="breadcrumb-item"><a href="acervo.html">Acervo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Coleção Imagens Históricas</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-4">Coleção Imagens Históricas</h1>
+    
+    <div class="card mb-5">
+      <div class="card-body">
+        <h2 class="card-title h4 mb-3">Livro da Polyanthea de 1925</h2>
+        <p class="card-text">
+          Coleção de fotografias históricas do Livro da Polyanthea de 1925, retratando importantes marcos históricos, 
+          arquitetônicos e culturais de Santana de Parnaíba no início do século XX. Este acervo representa um registro 
+          visual único da evolução urbana, social e cultural do município.
+        </p>
+        <p class="text-muted">
+          <i class="bi bi-info-circle"></i> Clique nas imagens para visualização ampliada
+        </p>
+      </div>
+    </div>
+
+    <!-- Galeria de Imagens -->
+    <div class="image-gallery">
+      <div class="row">
+        <!-- Imagem 1 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" 
+               data-img="assets/img/colecoes/polyanthea/igreja matriz.JPG"
+               data-caption="Igreja Matriz">
+            <img src="assets/img/colecoes/polyanthea/igreja matriz.JPG" alt="Igreja Matriz">
+            <div class="gallery-caption">Igreja Matriz</div>
+          </div>
+        </div>
+
+        <!-- Imagem 2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/cine teatro coronel raimundo.JPG"
+               data-caption="Cine Teatro Coronel Raimundo">
+            <img src="assets/img/colecoes/polyanthea/cine teatro coronel raimundo.JPG" alt="Cine Teatro Coronel Raimundo">
+            <div class="gallery-caption">Cine Teatro Coronel Raimundo</div>
+          </div>
+        </div>
+
+        <!-- Imagem 3 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/escolas reunidas sede.JPG"
+               data-caption="Escolas Reunidas Sede">
+            <img src="assets/img/colecoes/polyanthea/escolas reunidas sede.JPG" alt="Escolas Reunidas Sede">
+            <div class="gallery-caption">Escolas Reunidas Sede</div>
+          </div>
+        </div>
+
+        <!-- Imagem 4 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/congada1.JPG"
+               data-caption="Congada - Manifestação Cultural">
+            <img src="assets/img/colecoes/polyanthea/congada1.JPG" alt="Congada">
+            <div class="gallery-caption">Congada - Manifestação Cultural</div>
+          </div>
+        </div>
+
+        <!-- Imagem 5 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/parnayba.JPG"
+               data-caption="Vista Panorâmica de Parnaíba">
+            <img src="assets/img/colecoes/polyanthea/parnayba.JPG" alt="Vista Panorâmica">
+            <div class="gallery-caption">Vista Panorâmica de Parnaíba</div>
+          </div>
+        </div>
+
+        <!-- Imagem 6 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/paço municipal.JPG"
+               data-caption="Paço Municipal">
+            <img src="assets/img/colecoes/polyanthea/paço municipal.JPG" alt="Paço Municipal">
+            <div class="gallery-caption">Paço Municipal</div>
+          </div>
+        </div>
+
+        <!-- Imagem 7 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/ponte sobre p rio tiete.JPG"
+               data-caption="Ponte sobre o Rio Tietê">
+            <img src="assets/img/colecoes/polyanthea/ponte sobre p rio tiete.JPG" alt="Ponte Rio Tietê">
+            <div class="gallery-caption">Ponte sobre o Rio Tietê</div>
+          </div>
+        </div>
+
+        <!-- Imagem 8 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/usina geradora parnaiba.JPG"
+               data-caption="Usina Geradora Parnaíba">
+            <img src="assets/img/colecoes/polyanthea/usina geradora parnaiba.JPG" alt="Usina Geradora">
+            <div class="gallery-caption">Usina Geradora Parnaíba</div>
+          </div>
+        </div>
+
+        <!-- Imagem 9 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/fabrica melhoramentos.JPG"
+               data-caption="Fábrica Melhoramentos">
+            <img src="assets/img/colecoes/polyanthea/fabrica melhoramentos.JPG" alt="Fábrica Melhoramentos">
+            <div class="gallery-caption">Fábrica Melhoramentos</div>
+          </div>
+        </div>
+
+        <!-- Imagem 10 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/rua andre fernandes.JPG"
+               data-caption="Rua André Fernandes">
+            <img src="assets/img/colecoes/polyanthea/rua andre fernandes.JPG" alt="Rua André Fernandes">
+            <div class="gallery-caption">Rua André Fernandes</div>
+          </div>
+        </div>
+
+        <!-- Imagem 11 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/estação barureri.JPG"
+               data-caption="Estação Barueri">
+            <img src="assets/img/colecoes/polyanthea/estação barureri.JPG" alt="Estação Barueri">
+            <div class="gallery-caption">Estação Barueri</div>
+          </div>
+        </div>
+
+        <!-- Imagem 12 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/casarao colonial.JPG"
+               data-caption="Casarão Colonial">
+            <img src="assets/img/colecoes/polyanthea/casarao colonial.JPG" alt="Casarão Colonial">
+            <div class="gallery-caption">Casarão Colonial</div>
+          </div>
+        </div>
+
+        <!-- Imagem 13 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/corpo docente escola reunidas sede.JPG"
+               data-caption="Corpo Docente - Escolas Reunidas">
+            <img src="assets/img/colecoes/polyanthea/corpo docente escola reunidas sede.JPG" alt="Corpo Docente">
+            <div class="gallery-caption">Corpo Docente - Escolas Reunidas</div>
+          </div>
+        </div>
+
+        <!-- Imagem 14 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/vereadores.JPG"
+               data-caption="Vereadores">
+            <img src="assets/img/colecoes/polyanthea/vereadores.JPG" alt="Vereadores">
+            <div class="gallery-caption">Vereadores</div>
+          </div>
+        </div>
+
+        <!-- Imagem 15 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/santa casa.JPG"
+               data-caption="Santa Casa">
+            <img src="assets/img/colecoes/polyanthea/santa casa.JPG" alt="Santa Casa">
+            <div class="gallery-caption">Santa Casa</div>
+          </div>
+        </div>
+
+        <!-- Imagem 16 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/gruta agua fria.JPG"
+               data-caption="Gruta Água Fria">
+            <img src="assets/img/colecoes/polyanthea/gruta agua fria.JPG" alt="Gruta Água Fria">
+            <div class="gallery-caption">Gruta Água Fria</div>
+          </div>
+        </div>
+
+        <!-- Imagem 17 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/seminario menor pirapora.JPG"
+               data-caption="Seminário Menor Pirapora">
+            <img src="assets/img/colecoes/polyanthea/seminario menor pirapora.JPG" alt="Seminário Menor">
+            <div class="gallery-caption">Seminário Menor Pirapora</div>
+          </div>
+        </div>
+
+        <!-- Imagem 18 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/coreto p. 14 novembro.JPG"
+               data-caption="Coreto - Praça 14 de Novembro">
+            <img src="assets/img/colecoes/polyanthea/coreto p. 14 novembro.JPG" alt="Coreto">
+            <div class="gallery-caption">Coreto - Praça 14 de Novembro</div>
+          </div>
+        </div>
+
+        <!-- Imagem 19 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/cel raimundo i. cruz.JPG"
+               data-caption="Coronel Raimundo I. Cruz">
+            <img src="assets/img/colecoes/polyanthea/cel raimundo i. cruz.JPG" alt="Cel Raimundo">
+            <div class="gallery-caption">Coronel Raimundo I. Cruz</div>
+          </div>
+        </div>
+
+        <!-- Imagem 20 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal"
+               data-img="assets/img/colecoes/polyanthea/largo da matriz pirapora.JPG"
+               data-caption="Largo da Matriz Pirapora">
+            <img src="assets/img/colecoes/polyanthea/largo da matriz pirapora.JPG" alt="Largo da Matriz">
+            <div class="gallery-caption">Largo da Matriz Pirapora</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Informações Adicionais -->
+    <div class="card mt-5">
+      <div class="card-body">
+        <h5 class="card-title">Sobre a Coleção</h5>
+        <p class="card-text">
+          Este acervo fotográfico do Livro da Polyanthea de 1925 constitui um dos mais importantes registros visuais 
+          da história de Santana de Parnaíba. As imagens documentam a arquitetura colonial, o desenvolvimento urbano, 
+          as manifestações culturais e os personagens que contribuíram para a formação da identidade local.
+        </p>
+        <p class="mb-0"><strong>Período:</strong> 1925</p>
+        <p class="mb-0"><strong>Total de imagens no acervo:</strong> 95+ fotografias</p>
+        <p class="mb-0"><strong>Estado de conservação:</strong> Digitalizado</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal para visualização ampliada -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Visualização</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="" alt="" class="modal-img" id="modalImage">
+          <p class="mt-3" id="modalCaption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="footer-custom">
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+    // Script para o modal de imagens
+    document.addEventListener('DOMContentLoaded', function() {
+      const imageModal = document.getElementById('imageModal');
+      imageModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const imgSrc = button.getAttribute('data-img');
+        const caption = button.getAttribute('data-caption');
+        
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const modalTitle = document.getElementById('imageModalLabel');
+        
+        modalImage.src = imgSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+        modalTitle.textContent = caption;
+      });
+    });
+    
+    // Garantir atualização dos logos nesta página específica
+    setTimeout(function() {
+      if (typeof updateFooterLogos === 'function') {
+        updateFooterLogos();
+      }
+    }, 500);
+    
+    // Backup adicional
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (typeof updateFooterLogos === 'function') {
+          updateFooterLogos();
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

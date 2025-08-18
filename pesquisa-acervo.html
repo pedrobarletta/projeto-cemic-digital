@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa de Acervo - CEMIC Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="acervo.html">Visão Geral das Coleções</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-header">Coleções</li>
+              <li><a class="dropdown-item" href="colecao-alida-metcalf.html">Coleção Alida C. Metcalf</a></li>
+              <li><a class="dropdown-item" href="colecao-antonio-branco.html">Coleção Antônio Branco</a></li>
+              <li><a class="dropdown-item" href="colecao-bertha-nerici.html">Coleção Bertha Moraes Nérici</a></li>
+              <li><a class="dropdown-item" href="colecao-camara-municipal.html">Coleção Câmara Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ccam.html">Coleção CCAM</a></li>
+              <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
+              <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
+              <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
+              <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-anhanguera.html">Coleção Museu Anhanguera</a></li>
+              <li><a class="dropdown-item" href="colecao-secretaria-cultura.html">Coleção Secretaria de Cultura e Turismo</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-musica.html">Coleção Museu da Música</a></li>
+              <li><a class="dropdown-item" href="hemeroteca.html">Hemeroteca</a></li>
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO ESPECÍFICO DE CADA PÁGINA -->
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4"><i class="bi bi-search me-2"></i>Pesquisa de Acervo</h1>
+        <p class="lead mb-4">Busque documentos, imagens e registros históricos no acervo digital do CEMIC.</p>
+        
+        <!-- AVISO DE PROTÓTIPO -->
+        <div class="alert alert-warning mb-4" role="alert">
+          <h5 class="alert-heading"><i class="bi bi-info-circle-fill me-2"></i>Sistema Demonstrativo</h5>
+          <p class="mb-2">Esta é uma <strong>demonstração</strong> do futuro sistema de pesquisa do acervo digital do CEMIC.</p>
+          <hr>
+          <p class="mb-0">Os resultados apresentados são exemplos ilustrativos. O acervo real está em processo de digitalização e catalogação.</p>
+          <p class="mt-2 mb-0">Para consultas ao acervo físico, entre em contato: <strong>(11) 4154-6251</strong> ou <strong>(11) 4622-8700</strong></p>
+        </div>
+        
+        <!-- Formulário de Pesquisa -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="searchTerm" class="form-label">Termo de busca</label>
+                <input type="text" class="form-control" id="searchTerm" placeholder="Digite palavras-chave (ex: igreja, casario, festa...)">
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="category" class="form-label">Categoria</label>
+                  <select class="form-select" id="category">
+                    <option value="">Todas as categorias</option>
+                    <option value="documentos">Documentos</option>
+                    <option value="imagens">Imagens Históricas</option>
+                    <option value="periodicos">Periódicos</option>
+                    <option value="mapas">Mapas</option>
+                  </select>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="period" class="form-label">Período</label>
+                  <select class="form-select" id="period">
+                    <option value="">Todos os períodos</option>
+                    <option value="colonial">Período Colonial (até 1822)</option>
+                    <option value="imperial">Período Imperial (1822-1889)</option>
+                    <option value="republicano">República Velha (1889-1930)</option>
+                    <option value="moderno">Era Moderna (1930-1990)</option>
+                    <option value="contemporaneo">Período Contemporâneo (1990-presente)</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="d-grid">
+                <button type="button" class="btn btn-success btn-lg" onclick="realizarPesquisa()">
+                  <i class="bi bi-search me-2"></i>Pesquisar (Demonstração)
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Área de Resultados -->
+        <div id="searchResults" class="d-none">
+          <h3 class="mb-3">Resultados da Pesquisa (Exemplos Demonstrativos)</h3>
+          <div class="alert alert-secondary">
+            <i class="bi bi-exclamation-diamond me-2"></i>
+            <strong>Atenção:</strong> Os resultados abaixo são <strong>exemplos ilustrativos</strong> do que o sistema apresentará quando estiver totalmente operacional. Para consultas reais ao acervo, entre em contato conosco.
+          </div>
+          
+          <!-- Exemplo de resultados -->
+          <div class="row g-3" id="resultsContainer">
+            <!-- Os resultados serão inseridos aqui via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Dicas de Pesquisa -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h5 class="mb-0"><i class="bi bi-lightbulb me-2"></i>Dicas de Pesquisa</h5>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0">
+              <li>Use palavras-chave específicas como nomes de locais, pessoas ou eventos</li>
+              <li>Combine filtros de categoria e período para refinar sua busca</li>
+              <li>Termos relacionados: centro histórico, casario colonial, igreja matriz, bandeirantes</li>
+              <li>Para pesquisas mais específicas, entre em contato com nossa equipe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+    function realizarPesquisa() {
+      const searchTerm = document.getElementById('searchTerm').value;
+      const category = document.getElementById('category').value;
+      const period = document.getElementById('period').value;
+      
+      // Mostrar área de resultados
+      document.getElementById('searchResults').classList.remove('d-none');
+      
+      // Simular resultados baseados nos filtros
+      const resultsContainer = document.getElementById('resultsContainer');
+      
+      // Exemplos de resultados mockup
+      const mockResults = [
+        {
+          title: "Casa do Anhanguera - Centro Histórico",
+          type: "Documento Histórico",
+          period: "Período Colonial",
+          description: "Registro fotográfico da residência histórica do bandeirante Bartolomeu Bueno da Silva."
+        },
+        {
+          title: "Igreja Matriz de Santana - 1940",
+          type: "Imagem Histórica", 
+          period: "Era Moderna",
+          description: "Fotografia da Igreja Matriz na década de 1940, mostrando a arquitetura original."
+        },
+        {
+          title: "Mapa do Centro Histórico - 1950",
+          type: "Mapa",
+          period: "Era Moderna", 
+          description: "Planta baixa do centro histórico de Santana de Parnaíba na década de 1950."
+        }
+      ];
+      
+      resultsContainer.innerHTML = mockResults.map(result => `
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title">${result.title}</h6>
+              <span class="badge bg-primary mb-2">${result.type}</span>
+              <span class="badge bg-secondary mb-2 ms-1">${result.period}</span>
+              <p class="card-text small">${result.description}</p>
+              <button class="btn btn-outline-success btn-sm">Visualizar</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      
+      // Scroll para os resultados
+      document.getElementById('searchResults').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acervo - CEMIC Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="acervo.html">Visão Geral das Coleções</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-header">Coleções</li>
+              <li><a class="dropdown-item" href="colecao-alida-metcalf.html">Coleção Alida C. Metcalf</a></li>
+              <li><a class="dropdown-item" href="colecao-antonio-branco.html">Coleção Antônio Branco</a></li>
+              <li><a class="dropdown-item" href="colecao-bertha-nerici.html">Coleção Bertha Moraes Nérici</a></li>
+              <li><a class="dropdown-item" href="colecao-camara-municipal.html">Coleção Câmara Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ccam.html">Coleção CCAM</a></li>
+              <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
+              <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
+              <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
+              <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-anhanguera.html">Coleção Museu Anhanguera</a></li>
+              <li><a class="dropdown-item" href="colecao-secretaria-cultura.html">Coleção Secretaria de Cultura e Turismo</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-musica.html">Coleção Museu da Música</a></li>
+              <li><a class="dropdown-item" href="hemeroteca.html">Hemeroteca</a></li>
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO ESPECÍFICO DE CADA PÁGINA -->
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="mb-4">Acervo Digital - Coleções do CEMIC</h1>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Sobre o Acervo</h5>
+            <p class="card-text">
+              O acervo do CEMIC é composto por diversas coleções que preservam a memória histórica e cultural de Santana de Parnaíba e região. 
+              Cada coleção representa um conjunto documental único, organizado por origem, tema ou doador.
+            </p>
+          </div>
+        </div>
+
+        <!-- Grid de Coleções -->
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Coleção Alida C. Metcalf -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Alida C. Metcalf</h5>
+                <p class="card-text">Documentos históricos e pesquisas relacionadas à história de Santana de Parnaíba e região.</p>
+                <a href="colecao-alida-metcalf.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Antônio Branco -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Antônio Branco</h5>
+                <p class="card-text">Documentos pessoais, fotografias e biblioteca particular. Período: 1898-2011.</p>
+                <a href="colecao-antonio-branco.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Bertha Moraes Nérici -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Bertha Moraes Nérici</h5>
+                <p class="card-text">Livros, periódicos, fotografias e objetos pessoais. Período: 1906-2009.</p>
+                <a href="colecao-bertha-nerici.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Câmara Municipal -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Câmara Municipal</h5>
+                <p class="card-text">Atas, livros de posse, ofícios e documentos legislativos. Período: 1897-1997.</p>
+                <a href="colecao-camara-municipal.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção CCAM -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção CCAM</h5>
+                <p class="card-text">Documentos do Clube Atlético Sant'Ana. Período: 1931-1998.</p>
+                <a href="colecao-ccam.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Casa do Patrimônio -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Casa do Patrimônio</h5>
+                <p class="card-text">Documentos relacionados à preservação do patrimônio histórico local.</p>
+                <a href="colecao-casa-patrimonio.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fundo/Coleção CEMIC -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Fundo/Coleção CEMIC</h5>
+                <p class="card-text">Documentos diversos de prefeituras, indústrias e patrimônio regional. Período: 1910-presente.</p>
+                <a href="colecao-cemic.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Delegacia (SSP) -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Delegacia (SSP)</h5>
+                <p class="card-text">Documentos da Secretaria de Segurança Pública local.</p>
+                <a href="colecao-delegacia.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Prefeitura Municipal -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Prefeitura Municipal</h5>
+                <p class="card-text">Livros de impostos, escrituras e certidões. Período: 1879-1974.</p>
+                <a href="colecao-prefeitura.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Ralph Mennucci Gisbrecht -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Ralph Mennucci Gisbrecht</h5>
+                <p class="card-text">Cartões postais, livros sobre ferrovias e numismática. Período: 1789-presente.</p>
+                <a href="colecao-ralph-gisbrecht.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção C. M. Colaço -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção C. M. Colaço</h5>
+                <p class="card-text">Documentos administrativos escolares. Período: 1895-1913.</p>
+                <a href="colecao-cm-colaco.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Museu Anhanguera -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Museu Anhanguera</h5>
+                <p class="card-text">Documentos administrativos do Museu Anhanguera. Período: 1962-2018.</p>
+                <a href="colecao-museu-anhanguera.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Secretaria de Cultura e Turismo -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Secretaria de Cultura e Turismo</h5>
+                <p class="card-text">Fotografias de eventos culturais. Período: 1937-2010.</p>
+                <a href="colecao-secretaria-cultura.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coleção Museu da Música -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Coleção Museu da Música</h5>
+                <p class="card-text">Acervo musical e documentos relacionados à música local.</p>
+                <a href="colecao-museu-musica.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hemeroteca -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Hemeroteca</h5>
+                <p class="card-text">Coleção de jornais e periódicos históricos da região.</p>
+                <a href="hemeroteca.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Biblioteca -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Biblioteca</h5>
+                <p class="card-text">Acervo bibliográfico sobre história local e temas relacionados.</p>
+                <a href="biblioteca.html" class="btn btn-primary btn-sm">Acessar Coleção</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Estatísticas do Acervo</h5>
+            <ul class="list-unstyled">
+              <li><strong>Coleções:</strong> 16</li>
+              <li><strong>Período coberto:</strong> 1789 - presente</li>
+              <li><strong>Status:</strong> Em catalogação</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Acesso ao Acervo</h5>
+            <p class="card-text">Para consultar os documentos originais, entre em contato com o CEMIC para agendar sua visita.</p>
+            <a href="contato.html" class="btn btn-outline-primary btn-sm">Entre em Contato</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Contribua</h5>
+            <p class="card-text">Possui documentos ou materiais históricos? Ajude a preservar a memória local.</p>
+            <a href="contribua.html" class="btn btn-outline-success btn-sm">Saiba Como Contribuir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

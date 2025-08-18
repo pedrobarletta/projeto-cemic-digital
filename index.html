@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CEMIC Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="acervo.html">Visão Geral das Coleções</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-header">Coleções</li>
+              <li><a class="dropdown-item" href="colecao-alida-metcalf.html">Coleção Alida C. Metcalf</a></li>
+              <li><a class="dropdown-item" href="colecao-antonio-branco.html">Coleção Antônio Branco</a></li>
+              <li><a class="dropdown-item" href="colecao-bertha-nerici.html">Coleção Bertha Moraes Nérici</a></li>
+              <li><a class="dropdown-item" href="colecao-camara-municipal.html">Coleção Câmara Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ccam.html">Coleção CCAM</a></li>
+              <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
+              <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
+              <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
+              <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-anhanguera.html">Coleção Museu Anhanguera</a></li>
+              <li><a class="dropdown-item" href="colecao-secretaria-cultura.html">Coleção Secretaria de Cultura e Turismo</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-musica.html">Coleção Museu da Música</a></li>
+              <li><a class="dropdown-item" href="hemeroteca.html">Hemeroteca</a></li>
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BANNER CARROSSEL DINÂMICO -->
+  <div class="carousel-wrapper">
+    <section class="hero-carousel">
+      <div class="carousel-container">
+      <div class="carousel-slides" id="carouselSlides">
+        <!-- Slides gerados dinamicamente via JavaScript -->
+      </div>
+      
+      <!-- Indicadores -->
+      <div class="carousel-indicators" id="carouselIndicators">
+        <!-- Indicadores gerados automaticamente -->
+      </div>
+      
+      <!-- Controles de navegação -->
+      <button class="carousel-control prev" onclick="previousSlide()" title="Imagem anterior">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="carousel-control next" onclick="nextSlide()" title="Próxima imagem">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <section class="main-content">
+    <div class="container">
+      <div class="content-placeholder">
+        <h2 class="mb-4">Bem-vindo ao CEMIC Digital</h2>
+        <p class="lead">Este é um protótipo de acervo digital histórico-cultural de Santana de Parnaíba.</p>
+        <p>Aqui você poderá acessar documentos históricos, imagens, publicações e muito mais sobre a rica história de nossa cidade.</p>
+        
+        <!-- Seção de Coleções em Destaque -->
+        <div class="mt-5 mb-4">
+          <h3 class="mb-4">Coleções em Destaque</h3>
+          <div class="row">
+            <!-- Banner Coleção Antônio Branco -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-antonio-branco.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="assets/img/colecoes/foto_antonio_branco.png" class="card-img-top" alt="Antônio Branco" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Coleção Antônio Branco</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Documentos pessoais e biblioteca do ex-prefeito que dá nome à Biblioteca Municipal.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Banner Coleção Bertha Nérici -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-bertha-nerici.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="assets/img/colecoes/foto_bertha_nerici_moraes.png" class="card-img-top" alt="Bertha Moraes Nérici" 
+                         style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Coleção Bertha Moraes Nérici</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Acervo da primeira mulher a servir na Força Expedicionária Brasileira.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Banner Imagens Históricas -->
+            <div class="col-md-4 mb-3">
+              <a href="colecao-imagens-historicas.html" class="text-decoration-none">
+                <div class="card h-100 collection-banner">
+                  <div class="card-img-container" style="height: 300px; overflow: hidden; position: relative;">
+                    <img src="assets/img/colecoes/polyanthea/igreja matriz.JPG" class="card-img-top" alt="Igreja Matriz" 
+                         style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="card-img-overlay d-flex align-items-end" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                      <h5 class="text-white">Livro da Polyanthea de 1925</h5>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Coleção fotográfica histórica retratando Santana de Parnaíba no início do século XX.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção Sobre o CEMIC -->
+        <div class="about-cemic-section mt-5 mb-4">
+          <h3 class="mb-4">Sobre o CEMIC</h3>
+          <p class="lead">
+            O Centro de Memória e Integração Cultural de Santana de Parnaíba é o guardião 
+            da história de uma das cidades mais antigas do Brasil, fundada em 1580.
+          </p>
+          <p>
+            Com um acervo de mais de 10.000 documentos, fotografias e objetos que datam 
+            de 1789 até os dias atuais, o CEMIC preserva a memória de personalidades, 
+            instituições e momentos que moldaram nossa identidade cultural. Nossas 16 coleções 
+            incluem registros da Câmara Municipal, acervos pessoais de figuras importantes como 
+            Antônio Branco e Bertha Nérici, além de uma rica hemeroteca e biblioteca especializada.
+          </p>
+          <p>
+            O projeto CEMIC Digital, realizado com recursos da PNAB 2025, democratiza o acesso 
+            a este patrimônio, permitindo que pesquisadores, estudantes e cidadãos explorem 
+            nossa história de qualquer lugar.
+          </p>
+          <a href="sobre.html" class="btn btn-primary">
+            <i class="bi bi-arrow-right-circle me-2"></i>Conheça nossa história completa
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

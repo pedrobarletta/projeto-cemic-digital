@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contribua com o CEMIC - CEMIC Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-cemic.png" alt="CEMIC Digital">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Apresentação
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sobre.html">Sobre o CEMIC</a></li>
+              <li><a class="dropdown-item" href="#">Política de Acervos</a></li>
+              <li><a class="dropdown-item" href="#">Equipe do Projeto</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+              Acervo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="acervo.html">Visão Geral das Coleções</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-header">Coleções</li>
+              <li><a class="dropdown-item" href="colecao-alida-metcalf.html">Coleção Alida C. Metcalf</a></li>
+              <li><a class="dropdown-item" href="colecao-antonio-branco.html">Coleção Antônio Branco</a></li>
+              <li><a class="dropdown-item" href="colecao-bertha-nerici.html">Coleção Bertha Moraes Nérici</a></li>
+              <li><a class="dropdown-item" href="colecao-camara-municipal.html">Coleção Câmara Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ccam.html">Coleção CCAM</a></li>
+              <li><a class="dropdown-item" href="colecao-casa-patrimonio.html">Coleção Casa do Patrimônio</a></li>
+              <li><a class="dropdown-item" href="colecao-cemic.html">Fundo/Coleção CEMIC</a></li>
+              <li><a class="dropdown-item" href="colecao-delegacia.html">Coleção Delegacia (SSP)</a></li>
+              <li><a class="dropdown-item" href="colecao-imagens-historicas.html">Coleção Imagens Históricas</a></li>
+              <li><a class="dropdown-item" href="colecao-prefeitura.html">Coleção Prefeitura Municipal</a></li>
+              <li><a class="dropdown-item" href="colecao-ralph-gisbrecht.html">Coleção Ralph Mennucci Gisbrecht</a></li>
+              <li><a class="dropdown-item" href="colecao-cm-colaco.html">Coleção C. M. Colaço</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-anhanguera.html">Coleção Museu Anhanguera</a></li>
+              <li><a class="dropdown-item" href="colecao-secretaria-cultura.html">Coleção Secretaria de Cultura e Turismo</a></li>
+              <li><a class="dropdown-item" href="colecao-museu-musica.html">Coleção Museu da Música</a></li>
+              <li><a class="dropdown-item" href="hemeroteca.html">Hemeroteca</a></li>
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="pesquisa-acervo.html">Pesquisa de Acervo</a></li>
+              <li><a class="dropdown-item" href="contribua.html">Contribua com o CEMIC</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Publicações
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="publicacoes.html">Guias e Artigos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mediacao.html">Mediação Cultural</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Notícias e Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+
+        <!-- Controles de Acessibilidade -->
+        <div class="accessibility-controls d-flex ms-3">
+          <button onclick="toggleContrast()" class="btn btn-outline-light btn-sm" title="Alternar contraste">
+            <i class="bi bi-circle-half"></i>
+          </button>
+          <button onclick="adjustFontSize(1)" class="btn btn-outline-light btn-sm" title="Aumentar fonte">
+            A+
+          </button>
+          <button onclick="adjustFontSize(-1)" class="btn btn-outline-light btn-sm" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO ESPECÍFICO DE CADA PÁGINA -->
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4"><i class="bi bi-upload me-2"></i>Contribua com o CEMIC</h1>
+        <p class="lead mb-4">Ajude a preservar a memória de Santana de Parnaíba compartilhando seus registros históricos, fotografias e documentos conosco.</p>
+        
+        <!-- AVISO IMPORTANTE NO TOPO -->
+        <div class="alert alert-danger mb-4" role="alert">
+          <h5 class="alert-heading"><i class="bi bi-exclamation-octagon-fill me-2"></i>Sistema em Desenvolvimento</h5>
+          <p class="mb-2"><strong>ATENÇÃO:</strong> O sistema online de contribuições ainda não está operacional.</p>
+          <hr>
+          <p class="mb-0">Se você possui material histórico para compartilhar com o CEMIC, por favor <strong>entre em contato diretamente</strong>:</p>
+          <ul class="mb-0 mt-2">
+            <li>Telefones: <strong>(11) 4154-6251</strong> ou <strong>(11) 4622-8700</strong></li>
+            <li>Visite nossa sede para informações sobre o procedimento de doação</li>
+          </ul>
+          <p class="mt-2 mb-0"><small>O formulário abaixo é apenas uma demonstração das funcionalidades futuras do sistema.</small></p>
+        </div>
+        
+        <!-- Informações sobre contribuição -->
+        <div class="alert alert-info mb-4">
+          <h5><i class="bi bi-info-circle me-2"></i>Como você pode contribuir</h5>
+          <p class="mb-0">Sua participação é fundamental para enriquecer nosso acervo! Aceite fotos antigas, documentos familiares, objetos históricos e relatos orais que contem a história de nossa cidade.</p>
+        </div>
+
+        <!-- Formulário de Contribuição (DEMONSTRAÇÃO) -->
+        <div class="card" style="position: relative;">
+          <!-- Overlay para indicar que é demonstração -->
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.85); z-index: 10; display: flex; align-items: center; justify-content: center; border-radius: 0.375rem;">
+            <div class="text-center p-4">
+              <i class="bi bi-tools" style="font-size: 3rem; color: #6c757d;"></i>
+              <h4 class="mt-3">Formulário em Desenvolvimento</h4>
+              <p class="text-muted">Esta é uma demonstração das funcionalidades futuras.<br>Para contribuir, entre em contato pelos telefones indicados acima.</p>
+            </div>
+          </div>
+          
+          <div class="card" style="opacity: 0.5; pointer-events: none;">
+          <div class="card-header">
+            <h5 class="mb-0">Formulário de Contribuição</h5>
+          </div>
+          <div class="card-body">
+            <form id="contribuicaoForm">
+              <!-- Dados do Contribuinte -->
+              <h6 class="border-bottom pb-2 mb-3">Seus Dados</h6>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="nome" class="form-label">Nome completo *</label>
+                  <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">E-mail *</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="tel" class="form-control" id="telefone">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="endereco" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="endereco">
+                </div>
+              </div>
+
+              <!-- Informações do Material -->
+              <h6 class="border-bottom pb-2 mb-3 mt-4">Sobre o Material</h6>
+              <div class="mb-3">
+                <label for="tipoMaterial" class="form-label">Tipo de material *</label>
+                <select class="form-select" id="tipoMaterial" required>
+                  <option value="">Selecione o tipo</option>
+                  <option value="fotografia">Fotografia</option>
+                  <option value="documento">Documento</option>
+                  <option value="objeto">Objeto histórico</option>
+                  <option value="relato">Relato oral</option>
+                  <option value="mapa">Mapa/Planta</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Título/Nome do item *</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Ex: Festa Junina de 1980, Casa da Família Silva..." required>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="dataAprox" class="form-label">Data aproximada</label>
+                  <input type="text" class="form-control" id="dataAprox" placeholder="Ex: 1950, década de 60, anos 80...">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="local" class="form-label">Local retratado</label>
+                  <input type="text" class="form-control" id="local" placeholder="Ex: Centro Histórico, Rua Direita...">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição e contexto histórico *</label>
+                <textarea class="form-control" id="descricao" rows="4" placeholder="Conte a história por trás do item: quem são as pessoas, que evento representa, qual a importância histórica..." required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="origem" class="form-label">Origem do material</label>
+                <textarea class="form-control" id="origem" rows="2" placeholder="Como este item chegou até você? (herança familiar, aquisição, etc.)"></textarea>
+              </div>
+
+              <!-- Upload de Arquivo (mockup) -->
+              <div class="mb-3">
+                <label for="arquivo" class="form-label">Anexar arquivo (opcional)</label>
+                <input type="file" class="form-control" id="arquivo" accept="image/*,.pdf,.doc,.docx">
+                <div class="form-text">Formatos aceitos: JPG, PNG, PDF, DOC. Tamanho máximo: 10MB</div>
+              </div>
+
+              <!-- Termo de autorização -->
+              <div class="mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autorizacao" required>
+                  <label class="form-check-label" for="autorizacao">
+                    Autorizo o CEMIC a utilizar este material para fins de preservação histórica e divulgação cultural, respeitando os direitos autorais e de imagem. *
+                  </label>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn btn-secondary" onclick="limparFormulario()">Limpar</button>
+                <button type="submit" class="btn btn-success">
+                  <i class="bi bi-send me-2"></i>Enviar Contribuição
+                </button>
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+
+        <!-- Outras formas de contribuir -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h5 class="mb-0"><i class="bi bi-heart me-2"></i>Outras Formas de Contribuir</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h6><i class="bi bi-people me-2"></i>Voluntariado</h6>
+                <p class="small">Participe como voluntário em atividades de catalogação e digitalização do acervo.</p>
+              </div>
+              <div class="col-md-6">
+                <h6><i class="bi bi-mic me-2"></i>História Oral</h6>
+                <p class="small">Compartilhe suas memórias em entrevistas gravadas sobre a história da cidade.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h6><i class="bi bi-calendar3 me-2"></i>Eventos</h6>
+                <p class="small">Participe de eventos de coleta de memórias e doações de materiais históricos.</p>
+              </div>
+              <div class="col-md-6">
+                <h6><i class="bi bi-share me-2"></i>Divulgação</h6>
+                <p class="small">Ajude divulgando o projeto para amigos e familiares que possam ter materiais históricos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ REESTRUTURADO -->
+  <footer class="footer-custom">
+    <!-- Informações do projeto -->
+    <div class="footer-info">
+      <div class="container">
+        <p>Projeto realizado com recursos da PNAB 2025</p>
+        <p>Governo Federal • Ministério da Cultura</p>
+      </div>
+    </div>
+    
+    <!-- Logos dos parceiros em fundo branco -->
+    <div class="footer-logos-section">
+      <div class="container">
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="assets/img/logo-aldir-blanc.png" alt="Lei Aldir Blanc" class="logo-aldir-blanc-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-governo-cultura.png" alt="Governo Federal - Ministério da Cultura" class="logo-governo-cultura-rodape">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-santana-parnaiba.png" alt="Prefeitura de Santana de Parnaíba">
+          </div>
+          <div class="footer-logo">
+            <img src="assets/img/logo-cemic-verde.png" alt="CEMIC" class="logo-cemic-rodape">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+    // Função para limpar o formulário
+    function limparFormulario() {
+      document.getElementById('contribuicaoForm').reset();
+    }
+
+    // Função para simular envio do formulário
+    document.getElementById('contribuicaoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simular processamento
+      const button = document.querySelector('button[type="submit"]');
+      button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+      button.disabled = true;
+      
+      setTimeout(() => {
+        // Mostrar mensagem de sucesso
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+        alertDiv.innerHTML = `
+          <i class="bi bi-check-circle me-2"></i>
+          <strong>Contribuição enviada com sucesso!</strong> Agradecemos sua participação na preservação da memória de Santana de Parnaíba. Entraremos em contato em breve.
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        document.querySelector('.card-body').insertBefore(alertDiv, document.getElementById('contribuicaoForm'));
+        
+        // Limpar formulário
+        limparFormulario();
+        
+        // Restaurar botão
+        button.innerHTML = '<i class="bi bi-send me-2"></i>Enviar Contribuição';
+        button.disabled = false;
+        
+        // Scroll para o topo do card
+        document.querySelector('.card').scrollIntoView({ behavior: 'smooth' });
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

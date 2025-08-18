@@ -1,0 +1,595 @@
+/* Cores da paleta oficial do CEMIC */
+:root {
+  --cemic-green-dark: #00211b;
+  --cemic-green: #076633;
+  --cemic-blue-dark: #1a344a;
+  --cemic-blue-light: #9fb4db;
+  --cemic-black: #000000;
+}
+
+/* Fontes globais */
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+/* Navbar customizada */
+.navbar-custom {
+  background-color: var(--cemic-green) !important;
+  padding: 0.5rem 0;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 63px !important;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cemic-blue-light) !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--cemic-blue-light) !important;
+}
+
+.dropdown-menu {
+  background-color: var(--cemic-green);
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--cemic-green-dark);
+  color: white !important;
+}
+
+/* Wrapper do carrossel para cor de fundo */
+.carousel-wrapper {
+  width: 100%;
+  background-color: #e8e8e8; /* Cor de fundo para preencher laterais em telas grandes */
+  padding: 0;
+}
+
+/* Carrossel do Banner */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1400px; /* Limitar largura máxima */
+  margin: 0 auto; /* Centralizar horizontalmente */
+  min-height: 525px; /* Aumentado em 50% */
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 525px; /* Aumentado em 50% */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+/* Fundo desfocado */
+.carousel-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  transform: scale(1.1); /* ligeiro zoom para evitar bordas desfocadas */
+}
+
+/* Imagem nítida centralizada mantendo proporções */
+.carousel-slide-sharp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%; /* Aumentado para melhor aproveitamento */
+  height: 90%; /* Aumentado para ficar mais proporcional */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5; /* aumentado para garantir visibilidade */
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Estilos de texto removidos - carrossel apenas visual */
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+}
+
+.carousel-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Controles de navegação */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+/* Responsividade - Desktop médio */
+@media (max-width: 1400px) {
+  .hero-carousel {
+    max-width: 1200px;
+  }
+}
+
+/* Responsividade - Tablet */
+@media (max-width: 992px) {
+  .hero-carousel {
+    max-width: 100%; /* Ocupar toda largura em tablets */
+  }
+  
+  .carousel-container {
+    height: 480px; /* Aumentado em 50% */
+  }
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+  .hero-carousel {
+    min-height: 450px; /* Aumentado em 50% */
+    max-width: 100%;
+  }
+  
+  .carousel-container {
+    height: 450px; /* Aumentado em 50% */
+    box-shadow: none; /* Remover sombra em mobile */
+  }
+  
+  /* Ajustes para imagem nítida em mobile */
+  .carousel-slide-sharp {
+    width: 85%; /* largura um pouco menor em mobile */
+    height: 80%; /* altura um pouco menor em mobile */
+  }
+  
+  /* Ajustar fundo desfocado em mobile */
+  .carousel-slide-bg {
+    transform: scale(1.15); /* zoom maior em mobile para cobrir bem */
+  }
+  
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+}
+
+/* Botões de acessibilidade */
+.accessibility-controls {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 0.3rem;
+}
+
+.accessibility-controls .btn {
+  border-radius: 15px;
+  margin: 0 0.1rem;
+}
+
+/* Seção de conteúdo principal */
+.main-content {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.content-placeholder {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border-left: 4px solid var(--cemic-green);
+}
+
+/* Rodapé reestruturado */
+.footer-custom {
+  background-color: var(--cemic-green);
+  color: white;
+  padding: 1.5rem 0 0 0;
+  margin: 0;
+}
+
+.footer-info {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--cemic-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.footer-info .container {
+  margin: auto;
+}
+
+.footer-info p {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.footer-info p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-logos-section {
+  background-color: white;
+  padding: 2.5rem 0;
+  margin: 0;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  max-height: 90px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+/* Estilos de alto contraste */
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .main-content,
+.high-contrast .content-placeholder {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+.high-contrast .card-body {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card-title {
+  color: #fff !important;
+}
+
+.high-contrast .card-text {
+  color: #ccc !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  color: #fff !important;
+}
+
+.high-contrast p,
+.high-contrast .lead {
+  color: #ccc !important;
+}
+
+.high-contrast a {
+  color: #00ffff !important;
+}
+
+.high-contrast .btn-primary,
+.high-contrast .btn-success,
+.high-contrast .btn-warning {
+  background-color: #00ffff !important;
+  border-color: #00ffff !important;
+  color: #000 !important;
+}
+
+/* Melhorar visibilidade de ícones Bootstrap */
+.high-contrast .bi-file-earmark-text,
+.high-contrast .bi-images,
+.high-contrast .bi-book,
+.high-contrast .bi-calendar3,
+.high-contrast .bi-collection,
+.high-contrast .bi-shield-check,
+.high-contrast .bi-people,
+.high-contrast .bi-archive,
+.high-contrast .bi-camera,
+.high-contrast .bi-person,
+.high-contrast .bi-building,
+.high-contrast .bi-newspaper,
+.high-contrast .bi-palette,
+.high-contrast .bi-briefcase,
+.high-contrast .bi-laptop,
+.high-contrast .bi-eye,
+.high-contrast .bi-envelope {
+  color: #00ffff !important;
+}
+
+/* Sidebar com fundo claro em modo contraste */
+.high-contrast .bg-light {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 2px solid #333 !important;
+}
+
+/* Texto pequeno e legendas */
+.high-contrast .small,
+.high-contrast .text-muted {
+  color: #aaa !important;
+}
+
+/* Alertas e caixas de informação */
+.high-contrast .alert {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 2px solid #444 !important;
+}
+
+.high-contrast .alert-info {
+  background-color: #003366 !important;
+  border-color: #0066cc !important;
+}
+
+/* Botões customizados */
+.high-contrast .btn-outline {
+  background-color: #111 !important;
+  color: #00ffff !important;
+  border-color: #00ffff !important;
+}
+
+.high-contrast .btn-outline:hover {
+  background-color: #00ffff !important;
+  color: #000 !important;
+}
+
+/* Separadores */
+.high-contrast hr {
+  border-color: #555 !important;
+}
+
+/* Estilos para os banners de coleções */
+.collection-banner {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.collection-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.collection-banner .card-img-overlay {
+  padding: 10px;
+}
+
+.collection-banner .card-img-overlay h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsividade para banners */
+@media (max-width: 768px) {
+  .collection-banner .card-img-container {
+    height: 200px !important;
+  }
+  
+  .collection-banner .card-img-overlay h5 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para overlay de texto no carrossel */
+.carousel-slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 30px 40px 20px;
+  z-index: 10; /* maior que a imagem nítida */
+}
+
+.carousel-slide-overlay h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Responsividade para overlay do carrossel */
+@media (max-width: 768px) {
+  .carousel-slide-overlay {
+    padding: 20px 20px 15px;
+  }
+  
+  .carousel-slide-overlay h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Alto contraste para overlay do carrossel */
+.high-contrast .carousel-slide-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+}
+
+.high-contrast .carousel-slide-overlay h3 {
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.high-contrast .navbar,
+.high-contrast .footer-custom,
+.high-contrast .footer-info {
+  background-color: #111 !important;
+}
+
+.high-contrast .footer-logos-section {
+  background-color: #222 !important;
+}
+
+/* Logos de alto contraste gerenciados via JavaScript */
+
+/* Melhorar contraste para containers e imagens */
+.high-contrast .container {
+  background-color: transparent !important;
+}
+
+.high-contrast .rounded {
+  border: 1px solid #444 !important;
+}
+
+.high-contrast .shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(255,255,255,.15) !important;
+}
+
+/* Estilos para texto em imagens e captions */
+.high-contrast .text-center {
+  color: #fff !important;
+}
+
+/* Sticky sidebar */
+.high-contrast .sticky-top {
+  background-color: #111 !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 49px !important;
+    padding: 6px;
+  }
+  
+  .navbar-custom {
+    padding: 0.4rem 0;
+  }
+  
+  .footer-info {
+    padding: 0.8rem 0;
+    min-height: 70px;
+  }
+  
+  .footer-logo img {
+    max-height: 70px;
+    max-width: 120px;
+  }
+  
+  .footer-logos {
+    gap: 2rem;
+  }
+}
