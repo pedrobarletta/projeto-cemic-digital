@@ -112,20 +112,20 @@ class BannerCarousel {
         title: null
       },
       {
-        normal: 'conteudo acervo/foto_antonio_branco.png',
-        contrast: 'conteudo acervo/foto_antonio_branco.png',
+        normal: 'assets/img/colecoes/foto_antonio_branco.png',
+        contrast: 'assets/img/colecoes/foto_antonio_branco.png',
         link: 'colecao-antonio-branco.html',
         title: 'Coleção Antônio Branco'
       },
       {
-        normal: 'conteudo acervo/foto_bertha_nerici_moraes.png',
-        contrast: 'conteudo acervo/foto_bertha_nerici_moraes.png',
+        normal: 'assets/img/colecoes/foto_bertha_nerici_moraes.png',
+        contrast: 'assets/img/colecoes/foto_bertha_nerici_moraes.png',
         link: 'colecao-bertha-nerici.html',
         title: 'Coleção Bertha Moraes Nérici'
       },
       {
-        normal: 'conteudo acervo/livro da Polyanthea de 1925/igreja matriz.JPG',
-        contrast: 'conteudo acervo/livro da Polyanthea de 1925/igreja matriz.JPG',
+        normal: 'assets/img/colecoes/polyanthea/igreja matriz.JPG',
+        contrast: 'assets/img/colecoes/polyanthea/igreja matriz.JPG',
         link: 'colecao-imagens-historicas.html',
         title: 'Livro da Polyanthea de 1925'
       }
