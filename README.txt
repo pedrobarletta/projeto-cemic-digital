@@ -18,7 +18,7 @@ O projeto propõe ampliar o acesso da população ao acervo cultural e históric
 
 ### CONTEXTO E PROPÓSITO
 
-A ideia surgiu de conversas entre cidadãos sobre a ausência de um acervo acessível à população, com registros de eventos e histórias locais. Considerando a predominância dos meios digitais no cotidiano atual, a criação de um site com acervo digital se mostrou como a melhor solução para facilitar o acesso à informação e o contato com o centro.
+A ideia surgiu da necessidade de dar acesso à pesquisa, a todos os interessados, ao conteúdo do acervo histórico existente no CEMIC, além de registros de eventos, banco de depoimentos orais sobre a história local e produções literárias de interesse para a história do município. Considerando a predominância dos meios digitais no cotidiano atual, a criação de um site com acervo digital se mostrou como a melhor solução para facilitar o acesso à informação e o contato com o centro.
 
 ### CARACTERÍSTICAS TÉCNICAS
 
