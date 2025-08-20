@@ -320,25 +320,90 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Texto "REALIZAÇÃO:" */
+.footer-realizacao {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.realizacao-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Container principal dos logos */
 .footer-logos {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Agrupamento de parceiros/realizadores (esquerda) */
+.footer-logos-parceiros {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
+/* Agrupamento do bloco oficial (direita) */
+.footer-logos-oficiais {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Container básico dos logos */
 .footer-logo {
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80px;
 }
 
+/* Controle geral de imagens */
 .footer-logo img {
-  max-height: 90px;
-  max-width: 150px;
+  max-height: 60px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* HIERARQUIA: Governo Federal sempre maior/igual */
+.footer-logo-governo img {
+  min-width: 200px !important; /* Requisito obrigatório manual */
+  max-height: 70px !important; /* Maior que os demais */
+}
+
+/* HIERARQUIA: SNC - não ultrapassar "BRASIL" */
+.footer-logo-snc img {
+  max-height: 55px;
+  max-width: 150px;
+}
+
+/* HIERARQUIA: PNAB - preferencial ≥150px, mínimo 91px */
+.footer-logo-selo img {
+  max-height: 55px;
+  min-width: 91px;
+  max-width: 150px;
+}
+
+/* Separador visual entre grupos - Espessura x/24 conforme manual */
+.assinatura-separador {
+  width: calc(70px / 24); /* x/24 onde x = altura da marca Gov Federal (70px) */
+  height: 60px;
+  background-color: #ddd;
+  margin: 0 1.5rem;
+  flex-shrink: 0;
+  border-radius: 1px;
 }
 
 /* Estilos de alto contraste */
@@ -543,6 +608,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #222 !important;
 }
 
+/* Alto contraste para novos elementos */
+.high-contrast .realizacao-label {
+  color: #fff !important;
+}
+
+.high-contrast .assinatura-separador {
+  background-color: #666 !important;
+}
+
 /* Logos de alto contraste gerenciados via JavaScript */
 
 /* Melhorar contraste para containers e imagens */
@@ -584,12 +658,52 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 70px;
   }
   
-  .footer-logo img {
-    max-height: 70px;
-    max-width: 120px;
+  /* Mobile: Layout vertical com hierarquia mantida */
+  .footer-logos {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+    justify-content: center;
   }
   
-  .footer-logos {
-    gap: 2rem;
+  .footer-logos-parceiros {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-logos-oficiais {
+    flex-direction: column;
+    gap: 1.5rem;
+    order: 99; /* Bloco oficial sempre por último */
+  }
+  
+  /* Governo Federal dentro do bloco oficial sempre por último */
+  .footer-logo-governo {
+    order: 99;
+  }
+  
+  .footer-logo-governo img {
+    min-width: 200px !important; /* Requisito mantido */
+    max-height: 65px !important;
+  }
+  
+  /* Separador horizontal no mobile */
+  .assinatura-separador {
+    width: 60px;
+    height: 2px;
+    margin: 0.5rem 0;
+  }
+  
+  /* Ajustes gerais para mobile */
+  .footer-logo img {
+    max-height: 55px;
+  }
+  
+  .footer-logo-selo img {
+    max-height: 50px;
+  }
+  
+  .realizacao-label {
+    font-size: 0.95rem;
   }
 }
